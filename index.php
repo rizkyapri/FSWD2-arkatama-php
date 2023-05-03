@@ -55,7 +55,9 @@
       <h1 style="text-align: center;">Rizky Apriansyah : 4693003</h1>
       <ul>
         <hr>
-        <li><a href="pages/biodata.php">Biodata</a></li>
+        <li><a href="pages/biodata.php">Biodata</a></li>|
+        <li><a href="pages/triangle.php">Triangle</a></li>|
+        <li><a href="pages/function.php">Function</a></li>
         <hr>
       </ul>
     </nav>

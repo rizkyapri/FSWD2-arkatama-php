@@ -57,7 +57,9 @@
         <hr>
         <li><a href="pages/biodata.php">Biodata</a></li>|
         <li><a href="pages/triangle.php">Triangle</a></li>|
-        <li><a href="pages/function.php">Function</a></li>
+        <li><a href="pages/function.php">Function</a></li>|
+        <li><a href="pages/form.php">Form Input</a></li>|
+        <li><a href="pages/join.php">Join Tabel</a></li>
         <hr>
       </ul>
     </nav>

@@ -1,6 +1,8 @@
 <?php
 // Koneksi ke database
 include 'koneksi.php';
+// memanggil login process
+include "login-process.php";
 
 $id = $_GET['id'];
 $ambilData = mysqli_query($conn, "SELECT * FROM users WHERE id='$id'");
@@ -89,8 +91,10 @@ $data = mysqli_fetch_array($ambilData);
 </div>
 <div class="mb-3">
 <input class="btn btn-primary" type="submit" value="Submit" name="updateuser">
+<a href="tableUser.php" class="btn btn-primary">Kembali</a>
 </div>
 </form>
+</div>
 
 
 
@@ -128,7 +132,12 @@ if(isset($_POST['updateuser'])){
     // Query untuk menambah data
     $queryInsert = mysqli_query($conn,
     "UPDATE users 
-    SET name='$nama', role='$role2', password='$nama', email='$email', phone='$telp', address='$alamat', avatar='$file', updated_at=now()
+    SET name='$nama', role='$role2', password='$pass', email='$email', phone='$telp', address='$alamat', avatar='$file', updated_at=now()
     WHERE id='$id'") or die(mysqli_error($conn));
+
+    if($queryInsert == True){
+      header("location:tableUser.php");
+    }
+
     }
 ?>

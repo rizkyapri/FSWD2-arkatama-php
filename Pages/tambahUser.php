@@ -1,6 +1,8 @@
 <?php
 // Koneksi ke database
 include 'koneksi.php';
+// memanggil login process
+include "login-process.php";
 
 // Eksekusi query
 if(isset($_POST['adduser'])){
@@ -34,7 +36,7 @@ VALUES
 
 </head>
 <body>
-    <div class="container">
+<div class="container">
         
 <h2>Tambah Pengguna</h2>
 <form action="" method="post">
@@ -97,8 +99,10 @@ VALUES
 </div>
 <div class="mb-3">
 <input class="btn btn-primary" name="adduser" type="submit" value="Submit">
+<a href="tableUser.php" class="btn btn-primary">Kembali</a>
 </div>
 </form>
+</div>
 
 
 

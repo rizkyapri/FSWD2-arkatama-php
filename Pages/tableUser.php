@@ -1,7 +1,8 @@
 <?php
 // Koneksi ke database
 require_once 'koneksi.php';
-// include "koneksi.php";
+// memanggil login-process
+include "login-process.php";
 
 // Query untuk menampilkan data
 $query = "SELECT * FROM users";
@@ -33,6 +34,10 @@ if (isset($_GET['id'])) {
     <title>Table User</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         img{
             width:50px;
@@ -43,7 +48,21 @@ if (isset($_GET['id'])) {
 </head>
 <body>
 <div class="container">
-<h2>Data pengguna</h2>
+<div class="row pt-4">
+  <div class="col-5"><h2>Data pengguna</h2></div>
+  <div class="col-5">
+    <a class="btn btn-primary" href="tambahUser.php">
+      <i class="fas fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+      Tambah User
+    </a>
+  </div>
+  <div class="col-2">
+    <a class="btn btn-primary" href="logout.php">
+      <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+      Logout
+    </a>
+  </div>
+</div>
 <table class="table">
   <thead>
     <tr>
@@ -64,7 +83,7 @@ if (isset($_GET['id'])) {
       <th scope="row"><?= $row['id'] ?></th>
       <td>
           <div class="btn-group">
-            <button type="button" class="btn btn-primary">Detail</button>
+            <a href="detail.php?id=<?= $row['id'] ?>" class="btn btn-primary">Detail</a>
             <a href="editUser.php?id=<?= $row['id'] ?>" class="btn btn-warning">Edit</a>
             <a href='tableUser.php?id=<?= $row['id'] ?>'  class="btn btn-danger">Hapus</a>
           </div>

@@ -61,7 +61,8 @@
         <li><a href="pages/form.php">Form Input</a></li>|
         <li><a href="pages/join.php">Join Tabel</a></li>|
         <li><a href="pages/tableUser.php">Tabel Data</a></li>|
-        <li><a href="pages/tambahUser.php">Tambah Data</a></li>
+        <li><a href="pages/tambahUser.php">Tambah Data</a></li>|
+        <li><a href="pages/pbo.php">PBO</a></li>
         <hr>
       </ul>
     </nav>
